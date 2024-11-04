@@ -1,0 +1,114 @@
+{
+  "version": "38.0.1",
+  "artifacts": {
+    "BedrockproxyStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "BedrockproxyStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "BedrockproxyStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "BedrockproxyStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "notificationArns": [],
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/ad26b1cb365bd2c5d6f093495eaa9cbdad69cbdbdde5a7d3437e44a495c9b5ce.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "BedrockproxyStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "BedrockproxyStack.assets"
+      ],
+      "metadata": {
+        "/BedrockproxyStack/Bedrockproxy/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BedrockproxyServiceRoleA0577C04"
+          }
+        ],
+        "/BedrockproxyStack/Bedrockproxy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BedrockproxyB155AE77"
+          }
+        ],
+        "/BedrockproxyStack/Bedrockproxy/CurrentVersion/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BedrockproxyCurrentVersion477722B4c02c1c44659cbe64bbdaa577980f7b4b"
+          }
+        ],
+        "/BedrockproxyStack/EdgeRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EdgeRole11B24798"
+          }
+        ],
+        "/BedrockproxyStack/EdgeRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EdgeRoleDefaultPolicy3148FA4F"
+          }
+        ],
+        "/BedrockproxyStack/BedrockProxy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BedrockProxy9E476D6D"
+          }
+        ],
+        "/BedrockproxyStack/DistributionDomainName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DistributionDomainName"
+          }
+        ],
+        "/BedrockproxyStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/BedrockproxyStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/BedrockproxyStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/BedrockproxyStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "BedrockproxyStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
