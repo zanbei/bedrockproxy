@@ -69,6 +69,7 @@
    - 确保已安装 Node.js
    - 安装 AWS CDK CLI: `npm install -g aws-cdk`
    - 配置 AWS 凭证: `aws configure`
+   - 请选择us-east-1 region部署
 
 2. **克隆项目仓库**
    ```
@@ -90,8 +91,8 @@
    ```
    cdk init
    cdk synth
-   cdk bootstrap
-   cdk deploy
+   cdk bootstrap --region us-east-1
+   cdk deploy --region us-east-1
    ```
 
    这个命令将会:
