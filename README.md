@@ -85,7 +85,6 @@
 
 5. **部署 CDK Stack**
    ```
-   cdk init
    cdk synth
    cdk bootstrap --region us-east-1
    cdk deploy --region us-east-1
