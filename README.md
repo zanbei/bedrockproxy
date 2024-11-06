@@ -23,7 +23,6 @@
 2. **区域验证**: 确保请求只被路由到预定义的有效区域（us-east-1, us-west-2, ap-northeast-1, eu-west-1）。
 
 3. **请求头修改**: 
-   - 移除 `x-forwarded-for` 头以保护客户端 IP。
    - 设置自定义 `User-Agent` 为 "任意描述"。
 
 4. **动态源设置**: 根据解析的区域信息动态设置请求的源。
@@ -36,7 +35,7 @@
 2. CloudFront 触发 Lambda@Edge 函数。
 3. Lambda 函数解析请求中的 Authorization 头，提取区域信息。
 4. 验证区域是否在允许列表中。
-5. 修改请求头，删除 `x-forwarded-for`，设置 `User-Agent`。
+5. 修改请求头，设置 `User-Agent`。
 6. 根据解析的区域信息设置新的源（Bedrock API 终端节点）。
 7. 将修改后的请求发送到相应的 Bedrock API 终端节点。
 8. Bedrock API 处理请求并返回响应。
@@ -53,11 +52,8 @@
 
 - 确保 CloudFront 分配和 Lambda@Edge 函数正确配置。
 - 监控 CloudFront 和 Lambda@Edge 的性能和错误日志。
-- 定期审查和更新支持的区域列表。
 - 考虑实施额外的安全措施，如 WAF 规则。
 
-
-当然，我可以为您添加一段关于如何通过 CDK 部署这个环境的描述。我们可以将这部分内容添加到文档的末尾，在"注意事项"部分之后。以下是建议的内容：
 
 ---
 
