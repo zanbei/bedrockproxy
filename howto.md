@@ -96,7 +96,7 @@ public class BedrockRuntimeCustomEndpointExample {
 ```
 
 ## Python程序内设置环境变量
-···python
+```python
 import os
 import boto3
 from botocore.exceptions import ClientError
@@ -107,7 +107,7 @@ credentials = session.get_credentials()
 os.environ['AWS_ENDPOINT_URL_BEDROCK_RUNTIME'] = 'https://xxxx.cloudfront.net'
 # Create a Bedrock Runtime client in the AWS Region you want to use.
 client = boto3.client("bedrock-runtime", region_name="us-west-2")
-···
+```
 
 ## 应用配置说明
 
