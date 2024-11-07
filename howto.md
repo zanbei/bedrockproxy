@@ -13,6 +13,7 @@
 有两种方式可以设置:
 1. 在系统中设置环境变量`AWS_ENDPOINT_URL_BEDROCK_RUNTIME`，SDK会自动加载环境变量获取定制的URL地址。
 2. 在程序初始化client之前声明环境变量。注意在JAVA程序中环境变量为驼峰写法aws.endpointUrlBedrockRuntime。Python程序为AWS_ENDPOINT_URL_BEDROCK_RUNTIME
+
 SDK Custom Endpoint的具体说明可查看：[AWS SDK 参考指南](https://docs.aws.amazon.com/sdkref/latest/guide/feature-ss-endpoints.html)
 
 
