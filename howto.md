@@ -8,11 +8,11 @@
 
 ## 通过AWS SDK Custom Endpoint实现转发
 
-我们可以通过AWS SDK提供的功能，或其他方式进行流量转发， 我们下面主要介绍AWS SDK提供的方法。
+我们可以通过AWS SDK提供的功能，或其他方式进行流量转发， 
 
-有两种方式可以设置:
+我们下面主要介绍通过AWS SDK转发的两种方式:
 1. 在系统中设置环境变量`AWS_ENDPOINT_URL_BEDROCK_RUNTIME`，SDK会自动加载环境变量获取定制的URL地址。
-2. 在程序初始化client之前声明环境变量。注意在JAVA程序中环境变量为驼峰写法aws.endpointUrlBedrockRuntime。Python程序为AWS_ENDPOINT_URL_BEDROCK_RUNTIME
+2. 如果无法控制环境变量，则在程序初始化client之前声明环境变量。注意在JAVA程序中环境变量为驼峰写法aws.endpointUrlBedrockRuntime。Python程序为AWS_ENDPOINT_URL_BEDROCK_RUNTIME
 
 SDK Custom Endpoint的具体说明可查看：[AWS SDK 参考指南](https://docs.aws.amazon.com/sdkref/latest/guide/feature-ss-endpoints.html)
 
