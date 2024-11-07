@@ -14,7 +14,7 @@
 1. 在系统中设置环境变量`AWS_ENDPOINT_URL_BEDROCK_RUNTIME`，SDK会自动加载环境变量获取定制的URL地址。
 2. 如果无法控制环境变量，则在程序初始化client之前声明环境变量。注意在JAVA程序中环境变量为驼峰写法aws.endpointUrlBedrockRuntime。Python程序为AWS_ENDPOINT_URL_BEDROCK_RUNTIME
 
-SDK Custom Endpoint的具体说明可查看：[AWS SDK 参考指南](https://docs.aws.amazon.com/sdkref/latest/guide/feature-ss-endpoints.html)
+SDK Custom Endpoint的具体说明可查看：[AWS SDK 参考指南](https://docs.aws.amazon.com/sdkref/latest/guide/feature-ss-endpoints.html) 同时请关注不同语言SDK对Custom endpoint功能的适配程度以及版本要求。
 
 
 ## 针对Docker compose容器环境配置
