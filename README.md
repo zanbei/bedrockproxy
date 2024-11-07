@@ -53,6 +53,7 @@
 - 确保 CloudFront 分配和 Lambda@Edge 函数正确配置。
 - 监控 CloudFront 和 Lambda@Edge 的性能和错误日志。
 - 考虑实施额外的安全措施，如 WAF 规则。
+- 关于如何通过Bedrock全球加速方案的方法，请看[Howto](https://github.com/jief123/bedrockproxy/blob/main/howto.md)
 
 
 ---
