@@ -38,7 +38,7 @@ env | grep AWS_ENDPOINT
 
 ## 针对K8S设置环境变量
 
-### 1. ConfigMap 配置
+1. ConfigMap 配置
 ```yaml
 apiVersion: v1
 kind: ConfigMap
@@ -48,7 +48,7 @@ data:
   AWS_ENDPOINT_URL_BEDROCK_RUNTIME: "https://xxx.cloudfront.net"
 ```
 
-### 2. Pod 配置
+2. Pod 配置
 ```yaml
 apiVersion: v1
 kind: Pod
