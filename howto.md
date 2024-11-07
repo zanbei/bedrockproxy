@@ -104,7 +104,7 @@ session = boto3.Session()
 credentials = session.get_credentials()
 
 
-os.environ['AWS_ENDPOINT_URL_BEDROCK_RUNTIME'] = 'https://xxxx.cloudfront.net'
+os.environ['AWS_ENDPOINT_URL_BEDROCK_RUNTIME'] = 'https://xxx.cloudfront.net'
 # Create a Bedrock Runtime client in the AWS Region you want to use.
 client = boto3.client("bedrock-runtime", region_name="us-west-2")
 ```
