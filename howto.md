@@ -115,3 +115,7 @@ client = boto3.client("bedrock-runtime", region_name="us-west-2")
 
 ### DIFY平台配置示例
 <img width="414" alt="image" src="https://github.com/user-attachments/assets/a7ac057f-2667-446f-8cb7-156181e0a7e4">
+
+## 如何确认程序已经通过加速服务
+sudo tcpdump -n host xxx.cloudfront.net
+
