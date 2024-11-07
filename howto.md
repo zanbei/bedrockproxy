@@ -3,7 +3,7 @@
 
 ## 前置条件
 
-部署CDK后会获得Cloudfront Endpoint。
+部署CDK后会获得Cloudfront Endpoint，或者配置了其他自定义域名。
 > Cloudfront endpoint为`https://xxx.cloudfront.net`
 
 ## 通过AWS SDK Custom Endpoint实现转发
