@@ -55,9 +55,9 @@
 - 考虑实施额外的安全措施，如 WAF 规则。
 - 关于如何应用层面如何配置的方法，请看[Howto](https://github.com/jief123/bedrockproxy/blob/main/howto.md)
 - 目前Cloudfront默认最多60s等待时间，如果需要可以向AWS申请更长的等待时间。
-   Service: Amazon CloudFront
-   Region: US East (Northern Virginia)
-   Limit name: Response timeout per origin
+   --Service: Amazon CloudFront
+   --Region: US East (Northern Virginia)
+   --Limit name: Response timeout per origin
 
 
 ---
