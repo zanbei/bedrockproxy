@@ -16,6 +16,7 @@
 
 SDK Custom Endpoint的具体说明可查看：[AWS SDK 参考指南](https://docs.aws.amazon.com/sdkref/latest/guide/feature-ss-endpoints.html)。同时请注意不同语言SDK对Custom endpoint功能的适配程度以及版本要求。
 
+注意如果您通过anthropic-bedrock sdk 进行集成,那么环境变量名为`ANTHROPIC_BEDROCK_BASE_URL` 。
 
 ## 针对Docker compose容器环境配置
 
