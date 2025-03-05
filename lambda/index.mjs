@@ -10,6 +10,25 @@ export const handler = async (event) => {
         const request = event.Records[0].cf.request;
         const headers = request.headers;
         const authHeader = headers.authorization?.[0]?.value;
+        // 获取 X-Forwarded-For 头部
+        const xForwardedFor = headers['x-forwarded-for']?.[0]?.value;
+
+        console.log('Original headers:', JSON.stringify(request.headers, null, 2));
+
+        // 添加源 IP 地址限制
+        const allowedIps = []; // 示例允许的 IP 地址
+        if (xForwardedFor && !allowedIps.includes(xForwardedFor.split(',')[0].trim())) {
+            console.log('Forbidden IP:', xForwardedFor);
+            return {
+                status: '403',
+                statusDescription: 'Forbidden',
+                headers: {
+                    'content-type': [{ value: 'text/plain' }]
+                },
+                body: 'Access denied due to IP restriction.'
+            };
+        }
+        
         if (!authHeader) {
             return request;
         }
